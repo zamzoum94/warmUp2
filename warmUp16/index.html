@@ -1,0 +1,41 @@
+<!--
+    // Create an HTML, CSS and JS files and connect them together
+    // Create two buttons one that says “Left” and one that say “Right”
+    // Create a button below them that says “Create”
+    // Create two unordered lists next to each other
+    // Write a jQuery function that creates a new element in the left unordered list if 
+    // the “left” button was pressed before the “create” button and to the right unordered list if the “right” button was pressed before the “create” button
+    // Style the two unordered lists in CSS
+-->
+
+<!doctype HTML>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My web page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <input type="button" value="Left" id = "left">
+        <input type="button" value="Right" id = "right"><hr>
+        <input type="text" style="width: 300px;" id="text">
+        <input type="button" value="Create" id = "create">
+        <table>
+            <tr>
+                <td>
+                    <ul id="leftList">
+
+                    </ul>
+                </td>
+                <td>
+                    <ul id="rightList">
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="ext.js"></script>
+    </body>
+</html>
