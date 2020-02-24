@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script src="main.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    </head>
+
+<body>
+        <button id="leftBtn">Left</button>
+        <button id="rightBtn">Right</button>
+        <br>
+        <button id="createBtn">Create</button>
+        <br>
+       
+        
+        <ul id="leftList"></ul>
+        <ul id="rightList"></ul>
+       
+<script>
+          $(document).ready(function(){
+           $("#leftBtn").on("click",function(){                                 
+                    $("#leftList").append("<li>element</li>")
+                    $("#leftList").css('display', "none")
+                  
+          });
+
+          $("#rightBtn").on("click",function(){                                 
+                    $("#rightList").append("<li>element</li>")
+                    $("#rightList").css('display', "none")            
+          });
+          $("#createBtn").on("click",function(){                                 
+                    $("#leftList").css('display', "block")
+                    $("#rightList").css('display', "block")            
+
+
+          });
+
+        });
+
+</script>
+    
+</body>
+
+</html>
