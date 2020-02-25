@@ -31,3 +31,58 @@
             filter_list([1,'a','b',0,15]) == [1,0,15]
             filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
+
+// 3
+
+function filter(arr){
+    return arr.filter(function(val){
+        return typeof val === "number";
+    });
+}
+
+// 2
+function capitalise(str){
+    for(var i = 0; i < str.length; i++){
+        if(str[i] === "-" || str[i] === "_"){
+            str = str.slice(0, i) + str.slice(i+1);
+            if (i < str.length) {
+                var c = str[i];
+                c = c.toUpperCase();
+                str = str.slice(0, i) + c + str.slice(i+1);
+            }
+        }
+    }
+    return str;
+}
+
+// 1
+/*
+            I          1
+            V          5
+            X          10
+            L          50
+            C          100
+            D          500
+            M          1,000 
+*/
+function romana(str){
+    var sum = 0;
+    for(var i = 0; i < str.length; i++){
+        if(str[i] === "I") {
+            sum++;
+        } else if(str[i] === "V"){
+            sum += 5;
+        } else if(str[i] === "X"){
+            sum += 10;
+        } else if (str[i] === "L") {
+            sum += 50;
+        } else if(str[i] === "C"){
+            sum += 100;
+        } else if(str[i] === "D"){
+            sum += 500;
+        } else {
+            sum += 1000;
+        }
+    }
+    return sum;
+}
